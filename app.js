@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     })
 
 var typed = new Typed('.typed', {
-    strings: ["code.", "watch.","play.","explore."],
+    strings: ["code.", "watch.","play.","explore.","watch porn."],
     startDelay: 600,
     typeSpeed: 100,
     backSpeed: 100,
