@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUEGGER</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.30/vue.global.min.js"></script>
+
+    <style>
+        .box{ 
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin:20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-if="showBooks">
+            <p>{{title}} - {{age}} - {{author}}</p>
+            <button @click = "age++">Increase Age </button>
+            <button @click = "age--">Decrease Age </button>
+            <button @click = "changeTitle('ekup')">changeTitle </button>
+        </div>
+        <button @click="toggleShowBooks()">
+            <span v-if="showBooks">
+                Hide books
+            </span>
+            <span v-else>
+                Show books
+            </span>
+        </button>
+        <div v-show="showBooks">
+            currently showing books
+        </div>
+        <br>
+
+        <div class="box" @mouseover="handleEvent($event,5)">mouseover(enter)</div>
+        <div class="box" @mouseleave="handleEvent">mouseleave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMouseMove">position - {{x}},{{y}}</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
