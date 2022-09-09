@@ -3,6 +3,7 @@ var heading = document.querySelectorAll('.heading')
 var bigHeading = document.querySelectorAll('.big-heading')
 var smallHeading = document.querySelectorAll('.small-heading')
 var logo = document.querySelectorAll('.logo')
+var navigation = document.querySelectorAll('.navigation')
 
 
   
@@ -16,24 +17,8 @@ function TimeoutFunction (classname,timeout){
     })
 }
 
-function reveal(){
-    var reveals = document.querySelectorAll('.content')
-    for (let i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if(revealtop<windowHeight-revealpoint){
-            reveals[i].classList.add('animated');
-            reveals[i].classList.add('fadeInUp');
-        }
-
-        
-    }
 
 
-}
-window.addEventListener('scroll',reveal)
 
 window.addEventListener('DOMContentLoaded',()=>{
     
@@ -64,10 +49,34 @@ window.addEventListener('DOMContentLoaded',()=>{
     setTimeout(TimeoutFunction(bigHeading, 5400));
     setTimeout(TimeoutFunction(smallHeading, 5900));
     })
+    setTimeout(() => {
+        navigation.forEach((navigation)=>{
+
+            setTimeout(()=>{
+                navigation.classList.add('naviActive');
+
+            })
+        })
+    },7000);
+
+
+    for (let i = 0; i < 4; i++) {
+
+        setTimeout(function() {
+            $(`.n${1+i}`).addClass('naviActive');
+        }, 7000 + i*200);
+        
+    }
+    setTimeout(function() {
+        $(`.socials`).addClass('animated');
+        $(`.socials`).addClass('fadeInUp');
+    }, 8000);
+
+ 
 
 var typed = new Typed('.typed', {
     strings: ["code.", "watch.","play.","explore."],
-    startDelay: 600,
+    startDelay: 1400,
     typeSpeed: 100,
     backSpeed: 100,
     loop:true

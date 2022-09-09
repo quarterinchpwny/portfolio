@@ -1,5 +1,5 @@
-body{
-  
+body {
+
     background-color: rgba(22, 40, 64, 1);
     margin: 0px;
     width: 100%;
@@ -9,102 +9,198 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
-html{
+
+html {
     scroll-behavior: smooth;
 
 }
-.no-scroll{
+
+.no-scroll {
     overflow: hidden;
 }
 
-.grid
-{   
+.grid {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity:0;
+    opacity: 0;
 }
 
-.logo{ 
+.logo {
     opacity: 0;
 
 }
-.section{
+
+.section {
     position: relative;
     min-height: 82vh;
-    margin-top: 30vh;
+    margin-top: 20vh;
     margin-left: 3vw;
     margin-bottom: 10vh;
     opacity: 1;
 
 }
-.content{
+
+.content {
     min-height: 70vh;
     margin-left: 3vw;
-    opacity: 0;
-  
+
 }
-.heading{
+
+.heading {
     margin: 0px 0px 0px 4px;
     color: #77A0D9;
-    font-size: clamp(10px,2vw,40px);
+    font-size: clamp(10px, 2vw, 40px);
     font-weight: 400;
     opacity: 0;
- 
+
 }
-.typed{
+
+.typed {
 
     color: #cc8330;
 }
-.big-heading{
+
+.big-heading {
     margin: 0px 0px 0px 4px;
-    color:rgb(214, 211, 211);
+    color: rgb(214, 211, 211);
     font-size: clamp(40px, 4vw, 90px);
     opacity: 0;
-    
+
 
 }
-.small-heading{
+
+.small-heading {
     margin: 0px 0px 0px 4px;
     font-weight: 100;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     font-size: clamp(25px, 3vw, 40px);
     opacity: 0;
 
 }
 
-.activelogo{
+.activelogo {
     opacity: 1;
 }
 
+.socials {
+    display: flex;
+    margin-left: -40px;
+    align-items: initial;
+    position: relative;
+    list-style-type: none;
+    opacity: 0;
+
+}
+
+.socialLogo {
+    width: 20px;
+    color: white;
+    margin: 5px;
+
+}
+
+.s1 .s2 .s3 .s4 .s5 {
+    opacity: 0;
+}
 
 
-
-.fade{
-    opacity:0;
+.fade {
+    opacity: 0;
     transition: ease-in-out 1s;
 }
 
 @keyframes fadeInUp {
     from {
-        transform: translate3d(0,40px,0)
+        transform: translate3d(0, 40px, 0)
     }
 
     to {
-        transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
         opacity: 1
     }
 }
 
 
 .animated {
-    animation-duration: .75s;
+    animation-duration: .5s;
     animation-fill-mode: both;
-    -webkit-animation-duration: .75s;
+    -webkit-animation-duration: .5s;
     -webkit-animation-fill-mode: both
 }
+
 .fadeInUp {
     opacity: 0;
     animation-name: fadeInUp;
     -webkit-animation-name: fadeInUp;
+}
+
+
+.n1 .n2 .n3 {
+    opacity: 0;
+    color: white;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+.hove:hover,.socialLogo:hover{
+    color: #cc8330;
+
+}
+.navigation {
+    opacity: 0;
+
+}
+
+.naviActive {
+    transition: ease-in-out .5s;
+    transform: translateY(20px);
+    opacity: 1;
+
+}
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+    font-size: clamp(10px, 1vw, 156px);
+
+}
+
+
+nav ul li {
+
+    display: inline-block;
+    padding: 10px 20px;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+.fixed {
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -30vh;
+    /* Negative half of height. */
+    margin-left: -40vw;
+    /* Negative half of width. */
+
+}
+
+
+.device{
+
+    width: 100%;
+    height: 70vh;
 }
