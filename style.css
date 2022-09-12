@@ -16,6 +16,10 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
+.no-scroll{
+    overflow: hidden;
+
+}
 
 .bumper {
     padding-top: 5vh;
