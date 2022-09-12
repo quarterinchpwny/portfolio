@@ -1,3 +1,16 @@
+
+
+.logo {
+    opacity: 0;
+
+}
+.activelogo {
+    opacity: 1;
+}
+.fade {
+    opacity: 0;
+    transition: ease-in-out 1s;
+}
 .mv-svg-title {
     left: 50%;
     max-width: 80%;

@@ -81,10 +81,46 @@ var typed = new Typed('.typed', {
     backSpeed: 100,
     loop:true
   });
+  const options = {};
 
+  const observer = new IntersectionObserver(function
+  (entries, observer){
+      entries.forEach(entry => {
+          console.log("kita ko ang 1 lods");
+      });
+  }, options);
 
+  const spaceHolder = document.querySelector('.space-holder');
+  const horizontal = document.querySelector('.horizontal');
+  spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
 
+  function calcDynamicHeight(ref) {
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const objectWidth = ref.scrollWidth;
+    return objectWidth - vw + vh + 5; // 150 is the padding (in pixels) desired on the right side of the .cards container. This can be set to whatever your styles dictate
+  }
 
-   
+  window.addEventListener('scroll', () => {
+    const sticky = document.querySelector('.sticky');
+    horizontal.style.transform = `translateX(-${sticky.offsetTop}px)`;
+    //console.log(sticky.offsetTop)
+    const device = document.querySelector('.device');
+    if (sticky.offsetTop > 0 && sticky.offsetTop < 2956) {
+      device.style.opacity = '1';
+    }
+
+    else {
+      device.style.opacity = '0';
+    }
+
+    observer.observe(document.querySelector(".sample-card:nth-child(1)"));
+
+  });
+ 
+  window.addEventListener('resize', () => {
+    spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
+  });
+
 
 
