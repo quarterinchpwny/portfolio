@@ -295,6 +295,8 @@ img {
   .project-content {
     grid-column: 1/-1;
     padding: 40px;
+    background: rgba(2,12,27,0.7);
+
   }
 }
 .project-content .project-label {
@@ -321,7 +323,9 @@ img {
   .project-content .project-details p {
     background-color: transparent;
     padding: 20px 0;
+    color: rgb(241, 241, 241);
   }
+
 }
 .project-content .project-details ul {
   display: flex;
@@ -343,6 +347,7 @@ img {
   grid-row: 1/-1;
 
 }
+
 @media screen and (max-width: 768px) {
   .project-img {
     height: 100%;
@@ -373,11 +378,9 @@ img {
   
 }
 @media screen and (max-width: 768px) {
-  .project-container {
-    padding-left: 20px;
-  
-  }
+
   .project-img img {
+
     object-fit: scale-down;
     width: auto;
     height: 100%;
@@ -387,5 +390,4 @@ img {
 
   
 }
-
 
