@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="svg.css">
 </head>
 
-<body class="no-scroll">
+<body class="no-scroll" onscroll="animateIfInView()">
   <div class="bumper">
     <div class="logo">
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="2504.000000pt" height="838.000000pt"
@@ -186,48 +186,49 @@
             </h1>
         </div>
         <div>
-          
-      <ul class="socials">
-        <li><a href="https://github.com/quarterinchpwny" aria-label="GitHub" target="_blank" rel="noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socialLogo">
-              <title>GitHub</title>
-              <path
-                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-  
-              </path>
-            </svg>
-          </a>
-        </li>
-        <li><a href="https://www.instagram.com/quarterinchpwny/" aria-label="Instagram" target="_blank" rel="noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socialLogo">
-              <title>Instagram</title>
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path line x1="17.5" y1="6.5" x2="17.51"
-                y2="6.5">
-              </line>
-            </svg></a></li>
-  
-        <li><a href="https://twitter.com/quarterinchpwny" aria-label="Twitter" target="_blank" rel="noreferrer"><svg
-              xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socialLogo">
-              <title>Twitter</title>
-              <path
-                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-              </path>
-            </svg></a></li>
-        <li><a href="" aria-label="Linkedin" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg"
-              role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" class="socialLogo">
-              <title>LinkedIn</title>
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-              </path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg></a></li>
-  
-      </ul>
+
+          <ul class="socials">
+            <li><a href="https://github.com/quarterinchpwny" aria-label="GitHub" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socialLogo">
+                  <title>GitHub</title>
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li><a href="https://www.instagram.com/quarterinchpwny/" aria-label="Instagram" target="_blank"
+                rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socialLogo">
+                  <title>Instagram</title>
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path line x1="17.5" y1="6.5" x2="17.51"
+                    y2="6.5">
+                  </line>
+                </svg></a></li>
+
+            <li><a href="https://twitter.com/quarterinchpwny" aria-label="Twitter" target="_blank" rel="noreferrer"><svg
+                  xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socialLogo">
+                  <title>Twitter</title>
+                  <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                  </path>
+                </svg></a></li>
+            <li><a href="" aria-label="Linkedin" target="_blank" rel="noreferrer"><svg
+                  xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socialLogo">
+                  <title>LinkedIn</title>
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                  </path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg></a></li>
+
+          </ul>
 
         </div>
       </div>
@@ -235,21 +236,113 @@
 
 
 
-    
+
 
   </div>
 
-  <section class="container">
+  <section class="container" id="sample">
     <div class="space-holder">
       <div class="sticky">
-        <div class="fixed">
-          <img src="devices.png" alt="Girl in a jacket" class="device">
-        </div>
         <div class="horizontal">
           <section role="feed" class="cards" id="parent">
-            <article class="sample-card"></article>
-            <article class="sample-card"></article>
-            <article class="sample-card"></article>
+            <article class="sample-card">
+              about me dito
+            </article>
+            <article class="sample-card">
+              <div class="project-container">
+                <div class="project">
+                  <div class="project-content">
+                    <div class="project-label">01. Personal Project</div>
+                    <h4 class="project-title">Metabolic Syndrome Prediction</h4>
+                    <div class="project-details">
+                      <p>Used to predict if the user has Metabolic Syndrome through their biometrics, Trained using data
+                        from Centers for Disease Control and Prevention of USA and Naïve Bayes algorithm as the main
+                        algorithm for prediction through Python. Deployed using Flask through Heroku.
+                      </p>
+                      <ul class="lang">
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>Naive Bayes</li>
+                        <li>Heroku</li>
+                        <li>CatBoost</li>
+                      </ul>
+
+                      <a href="https://github.com/quarterinchpwny/Metabolic-syndrome" aria-label="GitHub Link"
+                        rel="noopener noreferrer" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" class="socialLogo">
+                          <title>GitHub</title>
+                          <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                          </path>
+                        </svg></a>
+
+
+                      <a href="https://metabolic-jerome.herokuapp.com/" aria-label="External Link" class="external"
+                        rel="noopener noreferrer" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" class="socialLogo">
+                          <title>External Link</title>
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg></a>
+
+
+                    </div>
+                  </div>
+                  <div class="project-img">
+                    <img class="trans" src="devices.png" alt="" />
+                  </div>
+            </article>
+            <article class="sample-card">
+              <div class="project-container">
+                <div class="project">
+                  <div class="project-content">
+                    <div class="project-label">TRYTRYTRY</div>
+                    <h4 class="project-title">ASD</h4>
+                    <div class="project-details">
+                      <p>Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom.
+                        Locavore kombucha street art ennui 90's, organic food truck hell of seitan skateboard literally
+                        hexagon fixie next level. Lomo salvia yuccie hella roof party echo park vegan four dollar toast
+                        cred.</p>
+                      <ul class="lang">
+                        <li>Shadow</li>
+                        <li>Demon</li>
+                        <li>Baby</li>
+                      </ul>
+
+                    </div>
+                  </div>
+                  <div class="project-img">
+                    <img class="trans" src="devices.png" alt="" />
+                  </div>
+            </article>
+            <article class="sample-card">
+              <div class="project-container">
+                <div class="project">
+                  <div class="project-content">
+                    <div class="project-label">ASD</div>
+                    <h4 class="project-title">ASDs</h4>
+                    <div class="project-details">
+                      <p>Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom.
+                        Locavore kombucha street art ennui 90's, organic food truck hell of seitan skateboard literally
+                        hexagon fixie next level. Lomo salvia yuccie hella roof party echo park vegan four dollar toast
+                        cred.</p>
+                      <ul class="lang">
+                        <li>Shadow</li>
+                        <li>Demon</li>
+                        <li>Baby</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="project-img">
+                    <img src="devices.png" alt="" />
+                  </div>
+            </article>
+            <article class="sample-card">
+              otherrpojks
+            </article>
           </section>
         </div>
       </div>

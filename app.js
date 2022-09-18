@@ -83,12 +83,7 @@ var typed = new Typed('.typed', {
   });
   const options = {};
 
-  const observer = new IntersectionObserver(function
-  (entries, observer){
-      entries.forEach(entry => {
-          console.log("kita ko ang 1 lods");
-      });
-  }, options);
+
 
   const spaceHolder = document.querySelector('.space-holder');
   const horizontal = document.querySelector('.horizontal');
@@ -104,17 +99,9 @@ var typed = new Typed('.typed', {
   window.addEventListener('scroll', () => {
     const sticky = document.querySelector('.sticky');
     horizontal.style.transform = `translateX(-${sticky.offsetTop}px)`;
-    //console.log(sticky.offsetTop)
+    console.log(sticky.offsetTop)
     const device = document.querySelector('.device');
-    if (sticky.offsetTop > 0 && sticky.offsetTop < 2956) {
-      device.style.opacity = '1';
-    }
 
-    else {
-      device.style.opacity = '0';
-    }
-
-    observer.observe(document.querySelector(".sample-card:nth-child(1)"));
 
   });
  
@@ -124,3 +111,35 @@ var typed = new Typed('.typed', {
 
 
 
+
+
+
+function animateIfInView() {
+    $.each($('.project'), function(key, value) {
+      if (isElementInViewport($(value))) {
+        $(value).addClass('project-view');
+        console.log('kita lods')
+      } else {
+        // (Optional) Fade out when out of view
+        $(value).removeClass('project-view');
+        console.log('di na kita lods')
+      };
+    });
+  }
+
+  function isElementInViewport(el) {
+
+    //special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+      el = el[0];
+    }
+  
+    var rect = el.getBoundingClientRect();
+  
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    );
+  }
