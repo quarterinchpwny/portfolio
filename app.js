@@ -84,7 +84,7 @@ var typed = new Typed('.typed', {
   const options = {};
 
 
-
+/*
   const spaceHolder = document.querySelector('.space-holder');
   const horizontal = document.querySelector('.horizontal');
   spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
@@ -104,27 +104,38 @@ var typed = new Typed('.typed', {
 
 
   });
- 
   window.addEventListener('resize', () => {
     spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
   });
 
-
-
-
-
-
+ */
+ 
 function animateIfInView() {
-    $.each($('.project'), function(key, value) {
+  if($(window).width() > 600) {
+    $.each($('#id1'), function(key, value) {
+      
       if (isElementInViewport($(value))) {
-        $(value).addClass('project-view');
-        console.log('kita lods')
-      } else {
+        $('.stay').addClass('project-view');
+        
+        $('#device').prop("src", "images/devices.png");
+
+      
+      } else if(isElementInViewport($('#top'))){
         // (Optional) Fade out when out of view
-        $(value).removeClass('project-view');
-        console.log('di na kita lods')
+        $('.stay').removeClass('project-view');
+      }
+      else if(isElementInViewport($('#id2'))){
+        // (Optional) Fade out when out of view
+        $('#device').prop("src", "images/devices2.png");
+
       };
     });
+  }
+else{
+  $('.stay').removeClass('project-view');
+
+}
+  
   }
 
   function isElementInViewport(el) {

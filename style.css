@@ -3,92 +3,55 @@
 *::after {
     box-sizing: inherit;
 }
-
 html {
     box-sizing: border-box;
     font-size: 100%;
     scroll-behavior: smooth;
 }
-
 body {
     margin: 0;
+    overflow-x: hidden;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
+
 .no-scroll{
     overflow: hidden;
-
 }
 
-.bumper {
+.container {
     padding-top: 5vh;
     background-color: rgba(22, 40, 64, 1);
     width: 100%;
     height: 100vh;
 }
+.container-content {
+  background-color: rgba(22, 40, 64, 1);
+  width: 100%;
+  height: 100vh;
+}
+.contents{
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contents-child{
+  position: relative;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+  flex-shrink: 0;
+  z-index: 1;
+  background-blend-mode: multiply;
+}
+.contents-child:nth-child(1){
 
-.container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+  background: rgba(5, 29, 65, 0.7)url('images/1st.png');
 }
 
-.space-holder {
-    position: relative;
-    width: 100%;
-}
-
-.sticky {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.horizontal {
-    position: absolute;
-    height: 100%;
-    will-change: transform;
-}
-
-.cards {
-    position: relative;
-    height: 100%;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.sample-card {
-    position: relative;
-    height: 100%;
-    width: 100vw;
-    flex-shrink: 0;
-    z-index: 1;
-    background-blend-mode: multiply;
-}
-
-.sample-card:nth-child(1) {
-    background: rgb(114, 112, 112);
-
-}
-
-.sample-card:nth-child(2) {
-  background-position: fixed;
-  background-size: cover;
-  background: url('images/background_1.jpg')rgba(5, 29, 65, 0.7);
-
-
-  
-}
-
-.sample-card:nth-child(3) {
-    background: rgb(121, 65, 65);
-
-}
 .grid {
     display: flex;
     align-items: center;
@@ -108,7 +71,6 @@ body {
     font-size: clamp(10px, 2vw, 40px);
     font-weight: 400;
     opacity: 0;
-
 
 }
 
@@ -235,6 +197,13 @@ nav ul li a {
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 
+.projects{
+    z-index: 1;
+    position: relative;
+
+    width: 100vw;
+}
+
 /*for project box*/
 ul,
 ol {
@@ -256,6 +225,7 @@ img {
   max-width: 1350px;
   margin: 25vh auto;
 
+
 }
 .lang{
   padding: 0 0 0 0;
@@ -276,12 +246,9 @@ img {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
   align-items: center;
-  opacity: 0;
+  
 }
-.project-view {
-  transition: ease-in-out .4s;
-  opacity: 1;
-}
+
 @media screen and (max-width: 768px) {
   .project {
     align-items: flex-start;
@@ -307,24 +274,30 @@ img {
   font-family: monospace;
 }
 .project-content .project-title {
-  font-size: 2rem;
+  font-size: clamp(20px, 3vw, 30px);
   margin: 10px 0 30px;
   color: #eee;
 }
 
 .project-content .project-details {
-  font-size: 15px;
+  font-size: clamp(8px, 2vw, 18px);
   line-height: 1.5;
-  color: #aaa;
+  color: white;
   
 }
 .project-content .project-details p {
-  background-color: #252525;
+  background-color: rgba(202, 194, 194, 0.3);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 20px 18px rgba(0, 0, 0, .3);
   padding: 20px 25px;
+  
+
 }
 @media (max-width: 600px) {
   .project-content .project-details p {
     background-color: transparent;
+    backdrop-filter: blur(0px);
+    box-shadow: 0px 0px 0px;
     color: white;
     padding: 20px 0;
 
@@ -340,7 +313,7 @@ img {
   margin-right: 20px;
   color: rgb(255, 255, 255);
   font-family: monospace;
-  
+  font-size: clamp(12px, 1vw, 15px);
 }
 
 .project-img {
@@ -349,6 +322,7 @@ img {
   border-radius: 2px;
   grid-column: 6/-1;
   grid-row: 1/-1;
+  opacity: 0;
 
 }
 
@@ -362,6 +336,7 @@ img {
     grid-column: 1/-1;
     opacity: 0.75;
   }
+  
 }
 .project-img:before {
   content: "";
@@ -392,6 +367,25 @@ img {
     margin-top: 30px;
   }
 
-  
 }
 
+.stay
+{
+  position: sticky;
+  display: block;
+  top: 25%;
+  width: 40vw;
+  opacity: 0;
+  left: 45%;
+  transition: ease-in-out .4s;
+  z-index: 2;
+  height: 0;
+  text-align: left;
+}
+
+
+
+.project-view {
+
+  opacity: 1;
+}
