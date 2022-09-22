@@ -104,11 +104,16 @@ var typed = new Typed('.typed', {
 
 
   });
-  window.addEventListener('resize', () => {
-    spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
-  });
+
 
  */
+
+  window.addEventListener('resize', () => {
+    if($(window).width() <= 600) {
+      $('.stay').removeClass('project-view');
+
+    }
+  });
  
 function animateIfInView() {
   if($(window).width() > 600) {
@@ -135,9 +140,19 @@ else{
   $('.stay').removeClass('project-view');
 
 }
-  
+
   }
 
+/*
+$('.project-content').mouseenter(function(){
+  $('.stay').addClass('project-view');
+
+});
+$('.project-content').mouseleave(function(){
+  $('.stay').removeClass('project-view');
+
+});
+*/
   function isElementInViewport(el) {
 
     //special bonus for those using jQuery
