@@ -11,7 +11,6 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
@@ -21,7 +20,9 @@ body {
 
 .container {
     padding-top: 5vh;
-    background-color: rgba(5, 29, 65,0.9);
+ 
+    background: rgba(5, 29, 65,0.9);
+
     width: 100%;
     height: 100vh;
 
@@ -30,7 +31,7 @@ body {
 .container-content {
   width: 100%;
   height: 100vh;
- 
+  z-index: -2;
 }
 
 .contents{
@@ -69,6 +70,8 @@ body {
     margin-left: 3vw;
     margin-bottom: 10vh;
     opacity: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 .heading {
     margin: 0px 0px 0px 4px;
@@ -271,8 +274,8 @@ img {
     grid-column: 1/-1;
     padding: 40px;
     background: rgba(5, 29, 65, 0.5);
-
   }
+
 }
 .project-content .project-label {
   color: #64ffda;
@@ -280,6 +283,8 @@ img {
 }
 .project-content .project-title {
   font-size: clamp(20px, 3vw, 30px);
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
   margin: 10px 0 30px;
   color: #eee;
 }
@@ -295,6 +300,7 @@ img {
   backdrop-filter: blur(5px);
   box-shadow: 0px 20px 18px rgba(0, 0, 0, .3);
   padding: 20px 25px;
+  font-family:  "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
   
 
 }
@@ -398,4 +404,7 @@ img {
 
 .project-view {
   opacity: 1;
+}
+.nawala{
+  opacity: 0;
 }

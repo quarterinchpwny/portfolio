@@ -122,7 +122,7 @@ function animateIfInView() {
       if (isElementInViewport($(value))) {
         $('.stay').addClass('project-view');
         
-        $('#device').prop("src", "images/devices.png");
+        $('#device').prop("src", "images/try.gif");
 
       
       } else if(isElementInViewport($('#top'))){
@@ -131,7 +131,7 @@ function animateIfInView() {
       }
       else if(isElementInViewport($('#id2'))){
         // (Optional) Fade out when out of view
-        $('#device').prop("src", "images/devices2.png");
+        $('#device').prop("src", "images/devices.png");
 
       };
     });
@@ -169,3 +169,9 @@ $('.project-content').mouseleave(function(){
       rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
     );
   }
+
+
+
+
+
+ 
