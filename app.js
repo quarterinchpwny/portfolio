@@ -3,7 +3,6 @@ var heading = document.querySelectorAll('.heading')
 var bigHeading = document.querySelectorAll('.big-heading')
 var smallHeading = document.querySelectorAll('.small-heading')
 var logo = document.querySelectorAll('.logo')
-var navigation = document.querySelectorAll('.navigation')
 
 
   
@@ -12,7 +11,6 @@ function TimeoutFunction (classname,timeout){
         setTimeout(() => {
             classname.classList.add('animated');
             classname.classList.add('fadeInUp');
-            
         }, timeout);
     })
 }
@@ -37,7 +35,6 @@ window.addEventListener('DOMContentLoaded',()=>{
             setTimeout(()=>{
                 logo.classList.remove('active');
                 logo.classList.add('fade');
-                document.body.classList.remove('no-scroll');
 
 
             })
@@ -49,28 +46,13 @@ window.addEventListener('DOMContentLoaded',()=>{
     setTimeout(TimeoutFunction(bigHeading, 5400));
     setTimeout(TimeoutFunction(smallHeading, 5900));
     })
-    setTimeout(() => {
-        navigation.forEach((navigation)=>{
 
-            setTimeout(()=>{
-                navigation.classList.add('naviActive');
-
-            })
-        })
-    },7000);
-
-
-    for (let i = 0; i < 4; i++) {
-
-        setTimeout(function() {
-            $(`.n${1+i}`).addClass('naviActive');
-        }, 7000 + i*200);
-        
-    }
     setTimeout(function() {
+      document.body.classList.remove('no-scroll');
+
         $(`.socials`).addClass('animated');
         $(`.socials`).addClass('fadeInUp');
-    }, 8000);
+    }, 7000);
 
  
 
@@ -83,30 +65,6 @@ var typed = new Typed('.typed', {
   });
   const options = {};
 
-
-/*
-  const spaceHolder = document.querySelector('.space-holder');
-  const horizontal = document.querySelector('.horizontal');
-  spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
-
-  function calcDynamicHeight(ref) {
-    const vw = window.innerWidth;
-    const vh = window.innerHeight;
-    const objectWidth = ref.scrollWidth;
-    return objectWidth - vw + vh + 5; // 150 is the padding (in pixels) desired on the right side of the .cards container. This can be set to whatever your styles dictate
-  }
-
-  window.addEventListener('scroll', () => {
-    const sticky = document.querySelector('.sticky');
-    horizontal.style.transform = `translateX(-${sticky.offsetTop}px)`;
-    console.log(sticky.offsetTop)
-    const device = document.querySelector('.device');
-
-
-  });
-
-
- */
 
   window.addEventListener('resize', () => {
     if($(window).width() <= 600) {
@@ -122,18 +80,26 @@ function animateIfInView() {
       if (isElementInViewport($(value))) {
         $('.stay').addClass('project-view');
         
-        $('#device').prop("src", "images/try.gif");
+        $('#device').prop("src", "images/metabolic.gif");
 
       
       } else if(isElementInViewport($('#top'))){
-        // (Optional) Fade out when out of view
         $('.stay').removeClass('project-view');
       }
       else if(isElementInViewport($('#id2'))){
-        // (Optional) Fade out when out of view
-        $('#device').prop("src", "images/devices.png");
+        $('#device').prop("src", "images/crypto.gif");
 
-      };
+      }
+      else if(isElementInViewport($('#id3'))){
+        $('#device').prop("src", "images/vision.gif");
+
+      }
+      else if(isElementInViewport($('#id4'))){
+        $('#device').prop("src", "images/market.gif");
+
+      }
+      ;
+      
     });
   }
 else{
@@ -143,17 +109,8 @@ else{
 
   }
 
-/*
-$('.project-content').mouseenter(function(){
-  $('.stay').addClass('project-view');
 
-});
-$('.project-content').mouseleave(function(){
-  $('.stay').removeClass('project-view');
-
-});
-*/
-  function isElementInViewport(el) {
+function isElementInViewport(el) {
 
     //special bonus for those using jQuery
     if (typeof jQuery === "function" && el instanceof jQuery) {
